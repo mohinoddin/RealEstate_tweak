@@ -60,7 +60,7 @@ const Form = () => {
     };
 //    https://realestate-backends.herokuapp.com/addnewproperty
     function handleSubmit() {
-        axios.post('http://localhost:3001/addnewproperty', formData).then((res) =>{ 
+        axios.post('https://realestate-backends.herokuapp.com/addnewproperty', formData).then((res) =>{ 
             console.log(res);
             navigate("/listproperty");
     })
