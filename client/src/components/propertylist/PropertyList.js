@@ -42,10 +42,7 @@ const PropertyList = ( {propertydetails} )=>{
         {/* <td className="tdtext">{propertydata._id.substr(propertydata._id.length - 7)}</td> */}
         <td className="tdtext ppdidtxt">{propertydata._id}</td>
         <td className="tdtext property_column_two"><FaRegImages onClick={()=>{setIsOpen(!isOpen);setIsImage(propertydata.image)}} className="image"/>
-        <Modal open={isOpen} onClose={()=>setIsOpen(!isOpen)}>
-                        <img src={isImage} style={{width:"500px",height:'400px',marginTop:'200px',borderRadius:'20.5px'}} alt="the property"/>
-                        {/* hello */}
-                    </Modal>
+        
         
         </td>
         <td className="tdtext">{propertydata.propertyType}</td>
@@ -64,6 +61,10 @@ const PropertyList = ( {propertydetails} )=>{
         </tr>
         </tbody>
       ))}      
+      <Modal open={isOpen} onClose={()=>setIsOpen(!isOpen)}>
+                        <img src={isImage} style={{width:"500px",height:'400px',marginTop:'200px',borderRadius:'20.5px'}} alt="the property"/>
+                        {/* hello */}
+                    </Modal>
        </table>
        </div>
        
